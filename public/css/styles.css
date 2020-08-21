@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: grey;
+    max-width: 70vw;
+    margin: 0 auto;
+    padding: 3px 16px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+header {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+nav {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+a {
+    color: grey;
+}
+
+a:hover {
+    color: blue;
+}
+
+nav a {
+    margin-right: 24px;
+    text-decoration-line: none;
+}
+
+.portrait {
+    width: 250px;
+    border-radius: 5%;
+}
+
+h1 {
+    font-size: 56px;
+    margin-bottom: 18px;
+}
+
+.form {
+    margin: 18px 0px;
+}
+
+input {
+    border: 1px solid lightgray;
+    border-radius: 5%;
+    padding: 4px;
+    color: gray;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid lightskyblue;
+    border-radius: 5%;
+    background: lightskyblue;
+    padding: 4px 8px;
+    color: white;
+}
+
+.weather-box {
+    background-image: url("/img/cloud-background.jpg");
+    background-color: aliceblue;
+    color: white;
+    height: 240px;
+    width: 100%;
+    display: table;
+    border-radius: 2%;
+}
+
+.weather-text {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    font-weight: 400;
+    font-size: 1.4em;
+    text-shadow: 2px 2px gray;
+}
+
+.weather-text p {
+    margin: 0px 0px;
+}
+
+footer {
+    position: absolute;
+    bottom: 12px;
+    padding: 12px;
+    border-top: 1px solid lightgray;
+}

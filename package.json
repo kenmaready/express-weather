@@ -1,0 +1,17 @@
+{
+    "name": "webserver",
+    "version": "1.0.0",
+    "description": "web server using express",
+    "main": "src/app.js",
+    "scripts": {
+        "dev": "nodemon src/app.js -e js,hbs",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "ken maready",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "hbs": "^4.1.1",
+        "request": "^2.88.2"
+    }
+}
