@@ -1,5 +1,13 @@
 const request = require("request");
-const { mapboxApiKey } = require("./secrets.js");
+var mapboxApiKey;
+
+try {
+    mapboxApiKey =
+        process.env.MAPBOX_API_KEY || require("./secrets.js").mapboxApiKey;
+} catch (e) {
+    console.log("Error .. trying environmental variable");
+    mapboxApiKey = process.env.MAPBOX_API_KEY;
+}
 
 const baseUrl = "https://api.mapbox.com/geocoding/v5/mapbox.places/";
 const limit = "1";

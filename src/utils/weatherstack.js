@@ -1,5 +1,13 @@
 const request = require("request");
-const { weatherstackApiKey } = require("./secrets.js");
+var weatherstackApiKey;
+
+try {
+    weatherstackApiKey =
+        process.env.WEATHERSTACK_API_KEY ||
+        require("./secrets.js").weatherstackApiKey;
+} catch (e) {
+    weatherstackApiKey = process.env.WEATHERSTACK_API_KEY;
+}
 
 const baseUrl = "http://api.weatherstack.com/";
 
