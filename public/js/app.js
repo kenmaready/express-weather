@@ -1,6 +1,6 @@
 console.log("Client side javascript loaded...");
 
-const BASE_URL = "http://localhost:3000/";
+const BASE_URL = window.location.origin;
 const URL_EXTENSION = "weather";
 const ADDRESS = "Christiansburg, VA";
 
@@ -19,7 +19,7 @@ locationForm.addEventListener("submit", (e) => {
 });
 
 const fetchWeather = (location) => {
-    fetch(`${BASE_URL}${URL_EXTENSION}?address=${location}`)
+    fetch(`${BASE_URL}/${URL_EXTENSION}?address=${location}`)
         .then((response) => response.json())
         .then((data) => {
             console.log(data);
