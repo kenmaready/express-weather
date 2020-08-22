@@ -2,7 +2,6 @@ console.log("Client side javascript loaded...");
 
 const BASE_URL = window.location.origin;
 const URL_EXTENSION = "weather";
-const ADDRESS = "Christiansburg, VA";
 
 const locationForm = document.querySelector("form");
 const searchBar = document.querySelector("input");
