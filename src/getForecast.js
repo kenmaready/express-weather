@@ -10,15 +10,26 @@ const getForecast = (address, callback) => {
 
         weatherstack.getCurrentWeather(
             { latitude, longitude },
-            (error, { temperature, description } = {}) => {
+            (error, { temperature, description, windspeed } = {}) => {
                 if (error) {
                     callback({ success: false, message: error });
                     return;
                 }
 
                 const forecast =
-                    description + ". It's currently " + temperature + "\u00B0.";
-                callback({ success: true, address, location, forecast });
+                    description +
+                    ". It's currently " +
+                    temperature +
+                    "\u00B0.  Winds are currently blowing at " +
+                    windspeed +
+                    "mph.";
+                callback({
+                    success: true,
+                    address,
+                    location,
+                    forecast,
+                    windspeed,
+                });
                 return;
             }
         );

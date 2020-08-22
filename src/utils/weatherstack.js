@@ -30,10 +30,15 @@ const getCurrentWeather = (location, callback) => {
                 undefined
             );
         } else {
-            const { temperature, weather_descriptions } = body.current;
+            const {
+                temperature,
+                weather_descriptions,
+                wind_speed,
+            } = body.current;
             callback(undefined, {
                 temperature: temperature,
                 description: weather_descriptions[0],
+                windspeed: wind_speed,
             });
         }
     });
